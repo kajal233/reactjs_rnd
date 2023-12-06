@@ -1,0 +1,165 @@
+.action_model {
+    .modal-dialog {
+        max-width: $full !important;
+        @include space(margin, top, $s30);
+        @include space(margin, bottom, $s30);
+
+        .modal-content {
+            border: none;
+            background: transparent;
+
+            .modal-header {
+                @include space(padding, all, $s20);
+                background: #00A8B3;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+    
+                h2 {
+                    color: map-get($color, white);
+                    @include space(margin, bottom, $zero);
+                    @include space(margin, top, $zero);
+                }
+
+                h4 {
+                    color: map-get($color, white);
+                    font-weight: bold;
+                    font-family: 'Open Sans', sans-serif;
+                    @include font_size($font_18);
+                }
+
+                .btn-close {
+                    @include font_size($font_26);
+                    background: transparent;
+                    color: map-get($color, white);
+                    opacity: 1;
+                    
+                    i {
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+
+            .modal-body {
+                @include space(padding, all, $s20);
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                background-color: map-get($color, white); 
+
+                .click {
+                    font-family: sans-serif;
+                    @include font_size($font_22);
+                    color: map-get($color, secondary);
+                }
+
+                ul, ol {
+                    padding-left: $s20 !important;
+                    @include space(margin, top, $s20);
+                    @include space(margin, bottom, $s10);
+                    @include space(margin, right, $s20);
+                    @include space(margin, left, $s30);
+                }
+            }
+
+            .modal-footer {
+                @include space(padding, all, $s20);
+                @include space(padding, top, $s15);
+                @include space(padding, bottom, $s15);
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                background-color: map-get($color, white);
+            }
+        }        
+    }
+}
+
+.model_table {
+    width: $full !important;
+
+    tr {
+        th {
+            font-weight: bold;
+            border-bottom: $zero !important;
+        }
+
+        &:first-child {
+            td {
+                border-top: 1px solid #ddd;
+            }
+        }
+
+        th, td {
+            @include space(padding, all, $s10);
+            @include font_size(21);
+            color: map-get($color, secondary);
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            .btn-danger {
+                @include font_size($font_24);
+                @include space(padding, all, 3px);
+                @include space(padding, left, 1.3rem);
+                @include space(padding, right, 1.3rem);
+            }
+
+            textarea {
+                @include font_size(21);
+                border: none;
+                @include space(padding, all, $zero);
+                resize: none;
+                min-height: 13rem;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.modelShow {
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.RemoveAction_model {
+
+    .modal-dialog {
+        width: 95% !important;
+
+        .modal-content {
+            .modal-body {
+                border-radius: $zero !important;
+                p {
+                    @include space(margin, bottom, $zero);
+                }
+            }
+        } 
+    }
+}
+
+.removePlan {
+    i {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.tab_model {
+    h2 {
+        color: map-get($color, secondary);
+    }
+}
+
+.disclaimer_model {
+    background-color: rgba(0,0,0, 0.5); 
+
+    .fa-triangle-exclamation {
+        color: map-get($color, white);
+        @include font_size($font_26);
+    }
+}

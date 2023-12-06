@@ -1,0 +1,104 @@
+
+/*footer*/
+footer{
+    border-top: 4px solid map-get($color, darkblue);
+    background-color: map-get($color, lightgray);
+    @include respond_below(sm){
+        @include space(padding, left, $zero);
+        @include space(padding, right, $zero);
+    }
+    // .border-r-mob{
+    //     @include respond-below(md){
+    //         border-right: 1pc solid map-get($color, white)
+    //     }
+    // }
+    .border-right-w{
+        border-right:1px solid map-get($color, white);
+        @include respond_below(md){
+            border: none;
+        }
+    }
+    .footlogo{
+        @include space(padding, top, $s20);
+        @include space(padding, right, $s20);
+        @include space(padding, bottom, $s20);
+        @include space(padding, left, $zero);
+        @include respond_below(sm){
+            display: none;
+        }
+    }
+        h4{
+            @include space(margin, top, $s10);
+            @include space(margin, bottom, $s10);
+            @include font_size($font_18);
+            font-weight: bold;
+            color: map-get($color, secondary);
+        }
+    .get-in-touch{
+        @include space(padding, top, $s10); 
+        @include space(padding, bottom, $zero);
+        @include respond_below(sm){
+            @include font_size($font_15);
+            // min-height: 180px;
+        }
+        // @include respond-below(md){
+        //     border-right: 1pc solid map-get($color, white)
+        // }
+        p{
+            color: map-get($color, secondary);
+            @include respond_below(sm){
+                @include font_size($font_15);
+            }
+        }
+    }
+    .other-links{
+        @include space(padding, top, $s10);
+   
+    .imp-links{
+        @include space(padding, left, $zero);
+       li{
+        list-style-type: none;
+        a{
+            color: map-get($color, blue);
+            padding: 2px 4px; 
+            @include space(margin, bottom, $s10); 
+            text-decoration: underline!important; 
+            display: block;
+            @include font_size($base_font);
+            line-height: 1.4;
+            @include respond_below(sm){
+                @include font_size($font_15);
+            }
+            &:hover{
+                color: map-get($color, white);
+                background-color: map-get($color, blue);
+            }
+            &:focus{
+                color: map-get($color, white);
+                background-color: map-get($color, blue);
+                outline: 5px solid map-get($color, borderprimary) !important
+            }
+        }
+    }
+    }
+}
+        
+    .other-info{
+        text-align: center; 
+        @include space(padding, top, $s20);
+        @include space(padding, right, $s10);
+        @include space(padding, bottom, $zero);
+        @include space(padding, left, $s10);
+        @include respond_below(sm){
+            @include space(padding, right, $zero);
+            @include space(padding, left, $zero);
+        }
+        p{
+            text-align: center;
+            color: map-get($color, secondary);
+            @include respond_below(sm){
+                @include font_size($font_15);
+            }
+        }
+    }
+}

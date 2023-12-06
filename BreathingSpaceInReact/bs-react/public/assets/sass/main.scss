@@ -1,0 +1,35 @@
+//Bootstrap File
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/bootstrap-utilities";
+
+// Partial Files
+@import "partials/global/variable";
+@import "partials/global/mixin";
+@import "partials/global/base";
+@import "partials/fonts/fonts";
+@import "partials/global/typography";
+@import "partials/buttons/buttons";
+@import "partials/footer/footer";
+@import "partials/primaryHeader/primaryHeader";
+@import "partials/site_navigation/site_navigation";
+@import "partials/Inner_page/inner_page_layout";
+@import "partials/main_panel/main_panel";
+@import "partials/model/model";
+@import "partials/carousel/carousel";
+@import "partials/card_section/card_section";
+@import "partials/cards/cards";
+@import "partials/news_card/news_card";
+@import "partials/other_info/other_info";
+@import "partials/inner_main_section/inner_main_section";
+@import "partials/breadcrumb_section/breadcrumb_section";
+@import "partials/news_section/news_section";
+@import "partials/heading_card/heading_card";
+@import "partials/feedback/feedback";
+@import "partials/treeviewlinks/treeviewlinks";
+@import "partials/signOfDepression/signOfDepression";
+
+html {
+	font-size: 62.5%; /* Sets up the Base 10 stuff */
+}

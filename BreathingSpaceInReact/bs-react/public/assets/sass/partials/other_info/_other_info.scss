@@ -1,0 +1,123 @@
+.other_info {
+    .other_info_heading {
+        background-color: map-get($innerColor, gray);
+        @include space(padding, all, $s10);
+        @include space(margin, bottom, $s10);
+
+        h3 {
+            color: map-get($color, white);
+            @include space(padding, all, $zero);
+            @include space(margin, all, $zero);
+            font-weight: bold;
+            @include font_size(17);
+            @include line_height($font_22);
+
+            @include respond_below(md) {
+                @include font_size(15);
+                @include line_height($font_20);
+            }
+        }
+    }
+
+    ul {
+        &.other_info_list {
+            @include space(padding, all, $zero);
+            @include space(margin, all, $zero);
+            list-style: none;
+            li {
+                a {
+                    display: block;
+                    font-weight: bold;
+                    @include space(padding, all, $s10);
+                    @include space(padding, top, $s15);
+                    @include space(padding, bottom, $s15);
+                    @include space(margin, bottom, $s10);
+                    @include font_size(17);
+                    @include line_height($font_24);
+                    font-weight: bold;
+                    color: map-get($color, primary);
+                    background-color: #eaeaea;
+                    text-decoration: underline !important;
+
+                    &.active {
+                        color: map-get($color, white);
+                        background-color: map-get($color, blue);
+                    }
+
+                    @include respond_below(md) {
+                        @include font_size(15);
+                        @include line_height($font_22);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.furtherinfobox {
+    position: relative;
+    @include space(padding, all, 26px);
+    @include space(margin, bottom, 16px);
+    background: #ccdeeb;
+    color: #191919;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-width: 0 16px 16px 0;
+        border-style: solid;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+        display: block;
+        width: 0;
+        background: #f2f2f2;
+        border-color: #fff #fff #005596 #005596;
+    }
+
+    h5 {
+        @include space(margin, bottom, $s20);
+        @include font_size(17);
+        @include line_height($font_22);
+        font-weight: bold;
+
+        @include respond_below(md) {
+            @include font_size(15);
+            @include line_height($font_18);
+        }
+    }
+
+    p {
+        font-family: $global_font;
+        @include space(margin, bottom, $s20);
+        color: #191919;
+
+        &:last-child {
+            @include space(margin, bottom, $zero);
+        }
+
+        @include respond_below(md) {
+            @include font_size(15);
+        }
+    }
+
+    a {
+        color: map-get($color, white);
+        background-color: map-get($color, blue);
+        line-height: 1.4;
+        display: block;
+        font-weight: bold;
+        @include font_size(17);
+        @include space(padding, all, $s10);
+        @include space(padding, top, 6px);
+        @include space(padding, bottom, 6px);
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+
+        @include respond_below(md) {
+            @include font_size(15);
+        }
+    }
+}

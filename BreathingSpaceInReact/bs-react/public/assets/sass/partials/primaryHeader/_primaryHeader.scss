@@ -1,0 +1,117 @@
+header {
+    @include space(padding, top, $s20);
+    @include space(padding, bottom, $s10);
+
+    .logo_block {
+        display: inline;
+
+        a {
+            display: inline-block;
+            &:focus{
+                position: relative;
+            }
+            img {
+                width: 8.7rem;
+                // @include respond_below(sm){
+                //     width: 9.7rem;
+                // }
+            }
+        }
+
+        figure {
+            display: inline;
+            @include space(margin, bottom, $zero);
+            img {
+                max-width: 40.9rem;
+                width: 78%;
+                @include space(margin, bottom, $s10);
+                @include respond-below(lg){
+                    width: 75%;
+                }
+            }
+
+            @include respond_below(md) {
+                display: none;
+            }
+        }
+    }
+    .d-flex-mob{
+        @include respond_below(sm){
+            display: flex;
+            flex-wrap: nowrap;
+            max-width: 80%;
+            .w-auto-mob{
+                width: auto;
+            }
+        }
+        .item-center{
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    .need-help-header{
+        display: flex;
+        align-items: flex-end;
+        border-right: 1px solid map-get($color, grayprimary);
+        @include respond-below(sm){
+            border-right: none;
+        }
+    .need_help {
+        p {
+            @include font_size(13.6);
+            font-weight: bold;
+            color: map-get($color, primary);
+            line-height: 0.8;
+            @include respond_below(sm){
+                @include font_size(12);
+                @include space(margin, bottom, $zero);
+            }
+            span {
+                display: block;
+
+                a {
+                    color: map-get($color, primary);
+                    text-decoration: underline !important;
+                    @include font_size(32.3);
+                    @include respond_below(sm){
+                        @include font_size(28.5);
+                    }
+                }
+            }
+        }
+    }
+    }
+    .open_time {
+        @include space(padding, left, $s15);
+        @include respond_below(sm){
+            @include space(padding, left, $zero);
+        }
+        p {
+            color: map-get($color, primary);
+            @include space(margin, bottom, $zero);
+            @include font_size(16);
+            @include respond_below(sm){
+                @include font_size(10);
+            }
+            &:first-child {
+                color: #444440;
+                font-weight: bold; 
+                @include respond_below(sm){
+                    @include font_size(16);
+                }
+            }
+
+            &:last-child {
+                background-color: map-get($color, blue);
+                color: map-get($color, white);
+            }
+        }
+    }
+}
+.px-20{
+    @include space(padding, left, $s20);
+    @include space(padding, right, $s20);
+}
+
+
+

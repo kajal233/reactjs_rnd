@@ -1,0 +1,47 @@
+.feedback-card{
+    @include space(padding, top, $s20!important);
+    @include space(padding, bottom, $s60!important);
+    @include space(padding, left, $s15!important);
+    @include space(padding, right, $s15!important);
+    @include space(margin, top, $s50!important);
+    @include space(margin, bottom, $s50!important); 
+    box-shadow: 0 0 10px #808080; 
+    h2{
+        @include space(margin, top, $s10);
+        @include space(margin, bottom, $s10);
+        @include font_size($font_28);
+        font-weight: bold;
+        color: map-get($color, secondary);
+        @include respond-below(md){
+            @include space(padding, top, $zero);
+            @include space(padding, bottom, $zero);
+        }
+    }
+    p{
+        line-height: 1.2;
+        @include font_size($base_font);
+        @include space(margin, bottom, $s10);
+        color: map-get($color, secondary);
+        @include respond-below(md){
+            font-size: 15px!important;
+        }
+    }
+    a{
+        color: map-get($color, primary);
+        font-family:  $global_font;
+        text-decoration: underline!important;
+        @include respond-below(md){
+            @include font_size($font_15);
+        }
+    }
+    h3{
+        @include space(margin, top, $s20);
+        @include space(margin, bottom, $s10);
+        @include font_size($base_font);
+        color: map-get($color, primeblue);
+        font-weight: bold;
+        @include respond-below(md){
+            @include font_size($font_15);
+        }
+    }
+}

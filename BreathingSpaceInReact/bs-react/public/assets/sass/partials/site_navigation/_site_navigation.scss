@@ -1,0 +1,261 @@
+
+/* Navigation xs */
+
+#navxs{
+    @include respond-above(sm){
+        display: none;
+    }
+    .navbar-collapse{
+        border-top: 1px solid map-get($color, blacksecondary);
+    }
+}
+
+/* Navigation lg*/
+
+.navbar{
+    &#navlg{
+        @include respond-below(sm){
+            display: none;
+        }
+    }
+    @include space(padding, top, $zero!important);
+    @include space(padding, bottom, $zero!important);
+    &.bg-light{
+        background-color: map-get($color, lightgray)!important;
+    }
+    .container{
+        @include space(padding, left, $zero);
+        @include space(padding, right, $zero);
+        @include respond_below(sm){
+            justify-content: right!important;
+        }
+        @media screen and (min-device-width: 1024px) and (max-device-width: 1199px) { 
+            @include space(padding, left, $s20!important);
+            @include space(padding, right, $s20!important);
+        }
+        .px-20{
+            @include respond-above(sm){
+                @include space(padding, left, $zero!important);
+                @include space(padding, right, $zero!important);
+            }  
+        }
+    .navbar-toggler{ 
+        padding: 6.25px 13px;
+        color: map-get($color, white);
+        border-color: #005596;
+        background-color: #090d5f;
+        border-radius: 4px;
+        @include respond_below(sm){
+            @include space(margin, right, $s15);
+            @include space(margin, top, $s08);
+            @include space(margin, bottom, $s08);
+        }
+        .fa-bars{
+            @include font_size(19);
+        }
+        &:focus{
+            outline: 5px solid map-get($color, borderprimary);
+            background-color: map-get($color, blue);
+        }
+    }
+    
+    .navbar-collapse{
+        .navbar-nav{
+            .nav-item{ 
+                    font-weight: bold;
+                    @include respond-above(sm){
+                        border-right: 1px solid map-get($color, grayprimary);
+                        &:first-child{
+                            border-left: 1px solid map-get($color, grayprimary);
+                        }
+                    }
+                    
+                &:first-child{
+                        color: map-get($color, primary)!important; 
+                        &:hover{
+                            background-color: map-get($color, solidblue);
+                            @include respond_below(sm){ 
+                                background-color: transparent; 
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: map-get($color, primary);
+                          li{
+                                &:hover{
+                                    background-color: map-get($color, solidblue);
+                                    text-decoration: underline!important;
+                                }
+
+                                @include respond_below(sm){ 
+                                    background-color: transparent; 
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        color: map-get($color, darkgreen)!important; 
+                        &:hover{
+                            background-color: map-get($color, darkgreen);
+                            @include respond_below(sm){ 
+                                background-color: transparent; 
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: map-get($color, solidgreen);
+                            li{
+                                &:hover{
+                                background-color: map-get($color, darkgreen);
+                                text-decoration: underline!important;
+
+                                @include respond_below(sm){ 
+                                    background-color: transparent; 
+                                }
+                            }
+                        }
+                        }
+                    }
+                    &:nth-child(3){
+                        color: map-get($color, textviolet)!important; 
+                        &:hover{
+                            background-color: map-get($color, solidpink);
+                            @include respond_below(sm){ 
+                                background-color: transparent; 
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: map-get($color, shinepink);
+                            li{ 
+                                &:hover{
+                                background-color: map-get($color, solidpink);
+                                text-decoration: underline!important;
+
+                                @include respond_below(sm){ 
+                                    background-color: transparent; 
+                                }
+                            }
+                        }
+                        }
+                    }
+                    &:last-child{
+                        color: map-get($color, textdarkorange)!important;
+                       
+                        &:hover{
+                            background-color: map-get($color, textdarkorange);
+                            @include respond_below(sm){ 
+                                background-color: transparent; 
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: map-get($color, solidorange);
+                            li{
+                                &:hover{
+                                background-color: map-get($color, textdarkorange);
+                                text-decoration: underline!important;
+
+                                @include respond_below(sm){ 
+                                    background-color: transparent; 
+                                }
+                            }
+                        }
+                        }
+                    }
+                    
+                    &:hover{
+                        color: map-get($color, white)!important;
+                        .nav-link{
+                            text-decoration: underline!important;
+                        }
+
+                    }
+ 
+
+                    .dropdown-menu.show{
+                        display: flex;
+                        border: none;
+                        border-radius: $zero;
+                        @include space(padding, all, $zero);
+                        // padding: 10px 16px 9px;
+                        @include respond_below(sm){
+                            display: block;
+                            background-color: transparent;
+                            border: none;
+                        }
+                        li{
+                            a{
+                                color: map-get($color, white); 
+                                @include font_size($base_font);
+                                font-weight: bold;
+                                padding: 10px 16px 9px;
+                                @include respond_below(sm){
+                                    color: map-get($color, dullgray) !important;
+                                    font-weight: bold;
+                                    padding: 5px 15px 5px 25px;
+                                    line-height: 20px;
+                                    @include font_size($font_16);
+                                }
+                                &:hover{
+                                    background-color: transparent;
+                                    text-decoration: underline!important;
+                                }
+                            }
+                        }
+                    }
+                    
+                .nav-link{
+                    font-weight: bold;
+                    text-decoration: none;
+                    @include space(padding, top, $s10);
+                    @include space(padding, bottom, $s10);
+                    @include space(padding, left, $s16);
+                    @include space(padding, right, $s16); 
+                    @include font_size($font_16);
+                    line-height: normal;
+                    display: inline-block;
+                    color: inherit;
+                    &:focus{
+                        position: relative;
+                        z-index: 9999;
+                    }
+                    @include respond_below(sm){
+                        color: map-get($color, darkblue)!important;    
+                        @include space(padding, top, $s10);
+                        @include space(padding, bottom, $s10);
+                        @include space(padding, left, $s16);
+                        @include space(padding, right, $s16);
+                        width: $full;
+                        @include font_size($font_16);
+                        text-decoration: none!important;
+                        &:focus{
+                            background-color: map-get($color, primary);
+                            color: map-get($color, white)!important;
+                            text-decoration: underline!important;
+                        }
+                       }
+                }
+            }
+        }
+    }
+}
+}
+
+.w-auto-mob {
+    padding-left: 0 !important;
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            @include respond_below(sm) {
+                color: #090d5f !important;
+                @include space(padding, top, $s10);
+                @include space(padding, bottom, $s10);
+                @include space(padding, left, $s16);
+                @include space(padding, right, $s16);
+                width: $full;
+                @include font_size($font_16);
+                text-decoration: none !important;
+                font-weight: bold;
+            }
+        }
+    } 
+} 
